@@ -1,0 +1,67 @@
+# Carpetas generadas automáticamente por Unity y no necesarias en el repositorio
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Caché de paquetes y configuraciones de Package Manager
+[Pp]ackages/com.unity.package-manager-ui/
+[Pp]rojectSettings/PackageManagerSettings.asset
+
+# Configuración local de usuario
+UserSettings/
+
+# Archivos del sistema y otros archivos ocultos
+.DS_Store
+.DS_Store?
+Thumbs.db
+ehthumbs.db
+
+# Archivos de sistema específicos de Windows
+*.tmp
+*.log
+*.obj
+*.pch
+*.pdb
+
+# Archivos de sistema específicos de macOS
+*.swp
+*.swo
+[Tt]humbs.db
+
+# Archivos específicos de Visual Studio y Visual Studio Code
+.vscode/
+.vs/
+*.csproj
+*.sln
+*.suo
+*.user
+*.userprefs
+*.pidb
+*.opendb
+*.VC.db
+*.VC.VC.opendb
+
+# Configuración de Rider
+.idea/
+*.sln.iml
+
+# Archivos de Unity Hub
+UnityHub/
+
+# Configuración de análisis de código
+*.stackdump
+
+# Archivos de respaldo de scripts
+*.bak
+
+# Archivos de compilación específicos de plataformas
+*.apk
+*.aab
+*.xcodeproj/
+*.xcworkspace/
+*.xcuserdata/
+*.pbxproj
