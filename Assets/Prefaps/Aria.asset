@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec6d352504d2042428ca8223f97ded83, type: 3}
+  m_Name: Aria
+  m_EditorClassIdentifier: 
+  personajeJugable: {fileID: 7924214115058012973, guid: 4cb773b92a077d449a9bf3662600cec4, type: 3}
+  imagen: {fileID: -651224511, guid: b28774e596d34a84ba2f797279cb1e7f, type: 3}
+  nombre: Aria
+  danoAtaque: "Nivel de Da\xF1o: 10 de da\xF1o"
+  ataque: 'Tipo de Ataque: A distancia'
+  equipamiento: 'Equipamiento: Baculo'

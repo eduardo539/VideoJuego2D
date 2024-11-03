@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb7571cbf55e95e4ca6d9915f57405e7
+guid: bf35ec6fc44f39b4e890f0d2695d26bb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -91,28 +91,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: leaderboards_full_window_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 382
-        height: 441
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af412f98f7faae842abd0e3cdd3db100
-      internalID: 424913298
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -123,8 +102,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      leaderboards_full_window_0: 424913298
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

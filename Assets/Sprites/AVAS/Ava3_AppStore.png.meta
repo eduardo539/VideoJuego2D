@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: eb7571cbf55e95e4ca6d9915f57405e7
+guid: b28774e596d34a84ba2f797279cb1e7f
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,13 +93,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: leaderboards_full_window_0
+      name: Ava3_AppStore_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 382
-        height: 441
+        width: 511
+        height: 512
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,8 +107,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: af412f98f7faae842abd0e3cdd3db100
-      internalID: 424913298
+      spriteID: 5f7840db61220ee4580ce9027e2b4fe9
+      internalID: -651224511
       vertices: []
       indices: 
       edges: []
@@ -124,7 +124,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      leaderboards_full_window_0: 424913298
+      Ava3_AppStore_0: -651224511
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
