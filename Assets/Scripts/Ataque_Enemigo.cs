@@ -22,9 +22,30 @@ public class Ataque_Enemigo : MonoBehaviour
         {
             if (colisionador.CompareTag("Player"))
             {
-                //GameObject.FindGameObjectsWithTag("Salida_1").GetComponent<Salida_Level1>().EnemigoEliminado();
-                colisionador.transform.GetComponent<Vida_Player>().TomarDano(danoGolpe);
-                //Destroy(gameObject);
+                // Intentar obtener el componente Vida_Player
+                Vida_Player vidaJugador = colisionador.GetComponent<Vida_Player>();
+
+                if (vidaJugador != null)
+                {
+                    // Si el objeto tiene Vida_Player, causarle daño
+                    vidaJugador.TomarDano(danoGolpe);
+                }
+                else
+                {
+                    // Intentar obtener un componente de vida aria
+                    Vida_Aria aria = colisionador.GetComponent<Vida_Aria>();
+                    
+                    if (aria != null)
+                    {
+                        // Si el objeto tiene aria, causarle daño
+                        aria.TomarDano(danoGolpe);
+                    }
+                    else
+                    {
+                        Debug.LogWarning("El objeto colisionado no tiene un componente de vida válido.");
+                    }
+                }
+
             }
         }
     }

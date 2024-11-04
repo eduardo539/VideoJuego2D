@@ -11,18 +11,29 @@ public class Dano_Tocar : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            // Intentar obtener el componente Vida_Player
             Vida_Player jugador = other.gameObject.GetComponent<Vida_Player>();
 
             if (jugador != null)
             {
-                // Si el goblin está en estado de ataque, causarle daño al jugador
+                // Si el objeto tiene Vida_Player, causarle daño
                 jugador.TomarDano(danoContacto, other.GetContact(0).normal);
             }
             else
             {
-                Debug.LogWarning("El objeto colisionado no tiene un componente Vida_Player.");
+                // Intentar obtener otro componente de vida aria
+                Vida_Aria aria = other.gameObject.GetComponent<Vida_Aria>();
+                
+                if (aria != null)
+                {
+                    // Si el objeto tiene aria, causarle daño
+                    aria.TomarDano(danoContacto, other.GetContact(0).normal);
+                }
+                else
+                {
+                    Debug.LogWarning("El objeto colisionado no tiene un componente de vida válido.");
+                }
             }
         }
-
     }
 }

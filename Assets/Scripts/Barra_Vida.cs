@@ -1,6 +1,64 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
+public class Barra_Vida : MonoBehaviour
+{
+    private Slider slider;
+
+    private void Awake()
+    {
+        slider = GetComponentInChildren<Slider>();
+        
+        if (slider == null)
+        {
+            Debug.LogError("No se encontró un componente Slider en este objeto ni en sus hijos.");
+        }
+    }
+
+    // Método para cambiar el valor máximo de vida
+    public void CambiarVidaMaxima(float vidaMaxima)
+    {
+        if (slider == null) return;
+
+        if (vidaMaxima > 0) // Asegurarse de que la vida máxima sea positiva
+        {
+            slider.maxValue = vidaMaxima;
+        }
+        else
+        {
+            Debug.LogWarning("El valor máximo de vida debe ser mayor que 0.");
+        }
+    }
+
+    // Método para actualizar la cantidad de vida actual
+    public void CambiarVidaActual(float cantidadVida)
+    {
+        if (slider == null) return;
+
+        cantidadVida = Mathf.Clamp(cantidadVida, 0, slider.maxValue);
+        slider.value = cantidadVida;
+    }
+
+    // Inicializar la barra de vida con la vida máxima y la vida actual
+    public void IniciarBarraVida(float vida)
+    {
+        CambiarVidaMaxima(vida);
+        CambiarVidaActual(vida);
+    }
+}
+
+
+
+
+
+
+
+/*
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.UI; // Usar el UI para el Canvas
 
 public class Barra_Vida : MonoBehaviour
@@ -9,7 +67,7 @@ public class Barra_Vida : MonoBehaviour
 
     void Start()
     {
-        slider = GetComponent<Slider>();
+        slider = GetComponentInChildren<Slider>();
 
         if (slider == null)
         {
@@ -45,3 +103,4 @@ public class Barra_Vida : MonoBehaviour
         CambiarVidaActual(vida);
     }
 }
+*/

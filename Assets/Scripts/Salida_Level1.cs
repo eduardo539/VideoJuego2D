@@ -9,6 +9,7 @@ public class Salida_Level1 : MonoBehaviour
     [SerializeField] private int enemigosEliminados;
     private Animator animator;
     private Maximus_Script maximus; // Referencia al script del jugador
+    private Aria_Script aria; // Referencia al script del jugador
 
     // Nombre de la escena del menú de niveles (asegúrate de que coincida con el nombre en los Build Settings)
     [SerializeField] private string nombreMenuNiveles = "Menu_Niveles";
@@ -16,6 +17,7 @@ public class Salida_Level1 : MonoBehaviour
     void Start()
     {
         maximus = FindObjectOfType<Maximus_Script>();
+        aria = FindObjectOfType<Aria_Script>();
         animator = GetComponent<Animator>();
         cantidadEnemigos = GameObject.FindGameObjectsWithTag("Enemigo").Length;
     }
@@ -50,9 +52,13 @@ public class Salida_Level1 : MonoBehaviour
             {
                 maximus.AnimacionSalida();
             }
+            else if(aria != null)
+            {
+                aria.AnimacionSalida();
+            }
             else
             {
-                Debug.LogError("Maximus_Script no está asignado en el objeto.");
+                Debug.LogError("No estan asignados los personajes en el objeto.");
             }
             StartCoroutine(EsperaSalida());
         }

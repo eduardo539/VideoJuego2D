@@ -19,7 +19,17 @@ public class Heart_Curar : MonoBehaviour
         }
         else
         {
-            Debug.Log("Vida al máximo, no se puede recoger el corazón.");
+            Vida_Aria aria = other.gameObject.GetComponent<Vida_Aria>();
+
+            if(aria != null && aria.VidaNoMaxima())
+            {
+                aria.Curar(cantidadCura);
+                Destroy(gameObject); // Destruir el corazón solo si el jugador se curó
+            }
+            else
+            {
+                Debug.Log("Vida al máximo, no se puede recoger el corazón.");
+            }
         }
     }
 }

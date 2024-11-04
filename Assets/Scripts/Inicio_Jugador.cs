@@ -7,7 +7,7 @@ public class Inicio_Jugador : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        int IndexJugador = PlayerPrefs.GetInt("JuagdorIndex");
+        int IndexJugador = PlayerPrefs.GetInt("JugadorIndex");
 
         // Instanciar el personaje seleccionado
         GameObject personajeInstanciado = Instantiate(GameManager.Instance.personajes[IndexJugador].personajeJugable, transform.position, Quaternion.identity);

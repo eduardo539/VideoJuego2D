@@ -32,11 +32,18 @@ public class Seleccionar_Personaje : MonoBehaviour
             index = 0;
         }
 
-        CamviarPantalla();
+        CambiarPantalla();
     }
 
-    private void CamviarPantalla()
+    private void CambiarPantalla()
     {
+        if (gameManager.personajes.Count == 0)
+        {
+            Debug.LogError("La lista de personajes está vacía. Asegúrate de que se hayan añadido personajes al GameManager.");
+            return;
+        }
+
+
         PlayerPrefs.SetInt("JugadorIndex", index);
         imagen.sprite = gameManager.personajes[index].imagen;
         nombre.text = gameManager.personajes[index].nombre;
@@ -56,7 +63,7 @@ public class Seleccionar_Personaje : MonoBehaviour
             index += 1;
         }
 
-        CamviarPantalla();
+        CambiarPantalla();
     }
 
     public void AnteriorPersonaje()
@@ -70,7 +77,7 @@ public class Seleccionar_Personaje : MonoBehaviour
             index -= 1;
         }
 
-        CamviarPantalla();
+        CambiarPantalla();
     }
 
     public void VolverAtras()

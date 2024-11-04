@@ -15,6 +15,6 @@ MonoBehaviour:
   personajeJugable: {fileID: 4349121375102496585, guid: 25b2d566af73046419f72775e13c2c94, type: 3}
   imagen: {fileID: 153380089, guid: 1fa0e98e70b34cf41ae5e014c22e522f, type: 3}
   nombre: Maximus
-  danoAtaque: "Nivel de Da\xF1o: 8 de da\xF1o"
+  danoAtaque: "Nivel de Da\xF1o: 10 de da\xF1o"
   ataque: 'Tipo de Ataque: Cuerpo a Cuerpo'
   equipamiento: 'Equipamiento: Espada'
