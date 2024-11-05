@@ -88,7 +88,8 @@ public class Seleccionar_Personaje : MonoBehaviour
     public void IniciarJuego()
     {
         //Debug.Log("Este es para seleccionar el personaje");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Menu_Principal");
     }
 
 }

@@ -68,7 +68,23 @@ public class Trampa_explosivo : MonoBehaviour
         {
             if (colisionador.CompareTag("Player"))
             {
-                colisionador.transform.GetComponent<Vida_Player>().TomarDano(danoExplosion); // Hacer daño al jugador
+                // Intenta obtener el componente Vida_Player
+                Vida_Player vidaPlayer = colisionador.GetComponent<Vida_Player>();
+                if (vidaPlayer != null)
+                {
+                    // Hacer daño al jugador si se encontró Vida_Player
+                    vidaPlayer.TomarDano(danoExplosion);
+                }
+                else
+                {
+                    // Si no se encontró Vida_Player, intenta obtener Vida_Aria
+                    Vida_Aria vidaAria = colisionador.GetComponent<Vida_Aria>();
+                    if (vidaAria != null)
+                    {
+                        // Hacer daño usando Vida_Aria
+                        vidaAria.TomarDano(danoExplosion);
+                    }
+                }
             }
         }
 
@@ -77,6 +93,7 @@ public class Trampa_explosivo : MonoBehaviour
         Destroy(gameObject); // Destruir la trampa después de la explosión
     }
 
+
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -84,3 +101,26 @@ public class Trampa_explosivo : MonoBehaviour
         Gizmos.DrawWireSphere(controlador_Explosion.position, radioExplosion);
     }
 }
+
+
+/*
+private IEnumerator ProcesarExplosion()
+    {
+        yield return new WaitForSeconds(0.2f); // Esperar un pequeño tiempo para sincronizar con la animación
+
+        // Buscar objetos en el radio de explosión
+        Collider2D[] objetos = Physics2D.OverlapCircleAll(controlador_Explosion.position, radioExplosion);
+
+        foreach (Collider2D colisionador in objetos)
+        {
+            if (colisionador.CompareTag("Player"))
+            {
+                colisionador.transform.GetComponent<Vida_Player>().TomarDano(danoExplosion); // Hacer daño al jugador
+            }
+        }
+
+        yield return new WaitForSeconds(0.2f); // Esperar un tiempo adicional para que la animación termine
+
+        Destroy(gameObject); // Destruir la trampa después de la explosión
+    }
+*/

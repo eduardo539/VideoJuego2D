@@ -37,33 +37,71 @@ public class Menu_Levels : MonoBehaviour
         {
             SeleccionarNivel();
         }
+
+        // Mover el selector según la posición del ratón
+        MoverSelectorConMouse();
     }
 
     void MoverSelector()
     {
-        // Posiciona el selector sobre el botón actualmente seleccionado usando su posición en la cuadrícula
+        // Posiciona el selector en el centro del botón actualmente seleccionado
         if (selector != null && botones.Length > 0)
         {
-            selector.position = botones[indiceActual].transform.position;
+            // Obtiene la posición del botón seleccionado
+            Vector3 botonPos = botones[indiceActual].transform.position;
+
+            // Ajusta la posición del selector al centro del botón
+            selector.position = new Vector3(botonPos.x, botonPos.y, botonPos.z); // Centra el selector
         }
     }
 
+
+
+    void MoverSelectorConMouse()
+    {
+        // Verifica si el puntero del ratón está sobre algún botón
+        for (int i = 0; i < botones.Length; i++)
+        {
+            if (RectTransformUtility.RectangleContainsScreenPoint(botones[i].GetComponent<RectTransform>(), Input.mousePosition))
+            {
+                // Actualiza el índice actual y mueve el selector
+                if (indiceActual != i)
+                {
+                    indiceActual = i;
+                    MoverSelector();
+                }
+                break; // Salimos del bucle si encontramos un botón
+            }
+        }
+    }
+
+
     void SeleccionarNivel()
     {
-        // Llama a la función de cambio de nivel usando el nombre del nivel o índice asociado al botón actual
-        string numeroNivel = botones[indiceActual].name; // O usa una propiedad específica si tienes nombres personalizados
-        CambiarNivel(numeroNivel);
+        // Llama al método onClick del botón actualmente seleccionado
+        botones[indiceActual].onClick.Invoke();
     }
 
-    public void CambiarNivel(string nombreNivel)
+    public void Nivel1()
     {
-        SceneManager.LoadScene(nombreNivel);
+        SceneManager.LoadScene("Level_1");
     }
 
-    public void CambiarNivel(int numeroNivel)
+    public void Nivel2()
     {
-        SceneManager.LoadScene(numeroNivel);
+        SceneManager.LoadScene("Level_2");
     }
+
+    public void Nivel3()
+    {
+        SceneManager.LoadScene("Level_3");
+    }
+
+    public void Salir()
+    {
+        SceneManager.LoadScene("Menu_Principal");
+    }
+
 }
 
 
