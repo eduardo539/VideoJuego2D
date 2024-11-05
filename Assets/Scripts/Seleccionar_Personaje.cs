@@ -80,11 +80,6 @@ public class Seleccionar_Personaje : MonoBehaviour
         CambiarPantalla();
     }
 
-    public void VolverAtras()
-    {
-        Debug.Log("Este boton es para regresar");
-    }
-
     public void IniciarJuego()
     {
         //Debug.Log("Este es para seleccionar el personaje");

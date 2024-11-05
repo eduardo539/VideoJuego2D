@@ -94,9 +94,18 @@ public class Menu_Principal : MonoBehaviour
 
     public void NuevoJuego()
     {
-        // Lógica para un nuevo juego
-        Debug.Log("Creando un nuevo juego...");
-        SceneManager.LoadScene("Nuevo_Juego");
+        SceneManager.LoadScene("Menu_Personajes");
+    }
+
+    public void Puntajes()
+    {
+        Debug.Log("Iniciando el menu de puntajes...");
+        //SceneManager.LoadScene("Nuevo_Juego");
+    }
+
+    public void Instrucciones()
+    {
+        SceneManager.LoadScene("Menu_Instrucciones");
     }
 
     public void Salir()

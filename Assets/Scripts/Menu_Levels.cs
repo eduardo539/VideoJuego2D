@@ -9,10 +9,11 @@ public class Menu_Levels : MonoBehaviour
     public Button[] botones;           // Array de botones del menú
     public RectTransform selector;     // Referencia al objeto selector
     private int indiceActual = 0;      // Índice del botón actualmente seleccionado
+    private int nivelesCount = 3;      // Número de niveles (ajustar según la cantidad de niveles)
 
     void Start()
     {
-        // Inicializa el selector en el primer botón
+        // Inicializa el selector en el primer botón de nivel
         MoverSelector();
     }
 
@@ -21,14 +22,14 @@ public class Menu_Levels : MonoBehaviour
         // Navegar hacia la izquierda con la tecla A
         if (Input.GetKeyDown(KeyCode.A))
         {
-            indiceActual = (indiceActual > 0) ? indiceActual - 1 : botones.Length - 1;
+            indiceActual = (indiceActual > 0) ? indiceActual - 1 : nivelesCount - 1;
             MoverSelector();
         }
 
         // Navegar hacia la derecha con la tecla D
         if (Input.GetKeyDown(KeyCode.D))
         {
-            indiceActual = (indiceActual < botones.Length - 1) ? indiceActual + 1 : 0;
+            indiceActual = (indiceActual < nivelesCount - 1) ? indiceActual + 1 : 0;
             MoverSelector();
         }
 
@@ -55,12 +56,10 @@ public class Menu_Levels : MonoBehaviour
         }
     }
 
-
-
     void MoverSelectorConMouse()
     {
-        // Verifica si el puntero del ratón está sobre algún botón
-        for (int i = 0; i < botones.Length; i++)
+        // Verifica si el puntero del ratón está sobre algún botón de nivel (no incluye "Salir")
+        for (int i = 0; i < nivelesCount; i++)
         {
             if (RectTransformUtility.RectangleContainsScreenPoint(botones[i].GetComponent<RectTransform>(), Input.mousePosition))
             {
@@ -74,7 +73,6 @@ public class Menu_Levels : MonoBehaviour
             }
         }
     }
-
 
     void SeleccionarNivel()
     {
@@ -101,8 +99,8 @@ public class Menu_Levels : MonoBehaviour
     {
         SceneManager.LoadScene("Menu_Principal");
     }
-
 }
+
 
 
 
