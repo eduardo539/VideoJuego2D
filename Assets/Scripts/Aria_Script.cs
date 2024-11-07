@@ -19,6 +19,8 @@ public class Aria_Script : MonoBehaviour
     [SerializeField] private float tiempoEntreAtaques;
     [SerializeField] private float tiempoSiguienteAtaque;
 
+    private bool controlesBloqueados = false; // Flag para bloquear los controles
+
 
 
     // Se ejecuta al inicio
@@ -33,6 +35,10 @@ public class Aria_Script : MonoBehaviour
 
     void Update()
     {
+
+        if (controlesBloqueados) return; // Evita actualizar controles si están bloqueados
+
+
         Horizontal = Input.GetAxisRaw("Horizontal");
 
         // Animación de correr
@@ -96,12 +102,16 @@ public class Aria_Script : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (controlesBloqueados) return; // Evita movimiento si los controles están bloqueados
+
         // Movimiento horizontal
         Rigidbody2D.velocity = new Vector2(Horizontal * Speed, Rigidbody2D.velocity.y);
     }
 
     private void HandleAttackInput()
     {
+        if (controlesBloqueados) return; // Evita ataque si los controles están bloqueados
+
         if(tiempoSiguienteAtaque > 0)
         {
             tiempoSiguienteAtaque -= Time.deltaTime;
@@ -156,6 +166,12 @@ public class Aria_Script : MonoBehaviour
     public void AnimacionSalida()
     {
         Animator.SetTrigger("salirTrigger");
+        controlesBloqueados = true; // Bloquea los controles durante la animación de salida
+    }
+
+    public void DesbloquearControles()
+    {
+        controlesBloqueados = false; // Método para desbloquear controles al entrar en el nuevo nivel
     }
 
     

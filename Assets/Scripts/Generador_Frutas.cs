@@ -11,7 +11,7 @@ public class Generador_Frutas : MonoBehaviour
     [SerializeField] private float areaMaxX; // Límite máximo en X
     [SerializeField] private LayerMask tilemapLayer; // Layer del Tilemap Collider
     [SerializeField] private float distanciaMinimaEntreFrutas = 1.5f; // Distancia mínima entre frutas
-    [SerializeField] private float alturaSobreTilemap = 0.5f; // Altura mínima sobre el tilemap
+    [SerializeField] private float alturaSobreTilemap; // Altura mínima sobre el tilemap
 
     private List<Vector2> posicionesGeneradas = new List<Vector2>(); // Lista de posiciones de frutas generadas
 

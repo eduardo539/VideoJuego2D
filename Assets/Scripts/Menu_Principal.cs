@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class Menu_Principal : MonoBehaviour
 {
-    public Button[] botones;           // Array de botones del menú
+    [SerializeField] public Button[] botones;           // Array de botones del menú
     public RectTransform selector;     // Referencia al objeto selector
     private int indiceActual = 0;      // Índice del botón actualmente seleccionado
 
@@ -87,8 +87,6 @@ public class Menu_Principal : MonoBehaviour
 
     public void Jugar()
     {
-        // Lógica para iniciar el juego
-        Debug.Log("Iniciando el juego...");
         SceneManager.LoadScene("Menu_Niveles");
     }
 
@@ -99,8 +97,7 @@ public class Menu_Principal : MonoBehaviour
 
     public void Puntajes()
     {
-        Debug.Log("Iniciando el menu de puntajes...");
-        //SceneManager.LoadScene("Nuevo_Juego");
+        SceneManager.LoadScene("Puntajes");
     }
 
     public void Instrucciones()
@@ -110,8 +107,6 @@ public class Menu_Principal : MonoBehaviour
 
     public void Salir()
     {
-        // Lógica para salir
-        Debug.Log("Saliendo del juego...");
         Application.Quit(); // Esto cierra la aplicación
     }
 }

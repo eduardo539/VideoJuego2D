@@ -376,7 +376,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.026299875}
+  m_Offset: {x: 0, y: -0.051810145}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -387,7 +387,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.10741041}
+  m_Size: {x: 0.16, y: 0.05638987}
   m_EdgeRadius: 0
 --- !u!212 &57493898
 SpriteRenderer:
@@ -450,7 +450,7 @@ Transform:
   m_GameObject: {fileID: 57493895}
   m_LocalRotation: {x: -0, y: -0, z: 0.70801264, w: 0.7061998}
   m_LocalPosition: {x: 5.843, y: -1.203, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 212211250}
@@ -1542,7 +1542,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.026299875}
+  m_Offset: {x: 0, y: -0.053475663}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1553,7 +1553,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.10741041}
+  m_Size: {x: 0.16, y: 0.053058837}
   m_EdgeRadius: 0
 --- !u!212 &207618686
 SpriteRenderer:
@@ -1616,7 +1616,7 @@ Transform:
   m_GameObject: {fileID: 207618683}
   m_LocalRotation: {x: -0, y: -0, z: 0.70801264, w: 0.7061998}
   m_LocalPosition: {x: 5.843, y: -1.359, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 212211250}
@@ -2883,6 +2883,7 @@ GameObject:
   - component: {fileID: 404759846}
   - component: {fileID: 404759845}
   - component: {fileID: 404759844}
+  - component: {fileID: 404759849}
   m_Layer: 0
   m_Name: Dark_Maximus
   m_TagString: Enemigo
@@ -3088,6 +3089,33 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &404759849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 404759839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 4270355607992330371, guid: a24e73034b76c0841b3004268d070447, type: 3}
+  - {fileID: 2523237949029137694, guid: b3c442fb43d744e478f86a5789e426fd, type: 3}
+  - {fileID: 6691042382158915525, guid: 81de504e0d54d81428b97977d0053862, type: 3}
+  - {fileID: 2503349854847614922, guid: 2d07b59bf3a96134a8fabcc2a053b646, type: 3}
+  - {fileID: 6384396631057470011, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+  - {fileID: 2651215778894457355, guid: bd83caab5bfc69c4f8cf1147c831d807, type: 3}
+  - {fileID: 8245847510694726342, guid: be0b39823921a8f48a755f65c08b05cb, type: 3}
+  - {fileID: 2982144576928713800, guid: 4101ba6a7fed2e94595d4f78ddf100b9, type: 3}
+  - {fileID: 3197233239917844716, guid: 1fd300929583e20459f8f704cf1e132b, type: 3}
+  - {fileID: 2308682068062766438, guid: a406884e817bb0547b62281f4b63319b, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &405327239
 GameObject:
   m_ObjectHideFlags: 0
@@ -4420,6 +4448,7 @@ GameObject:
   - component: {fileID: 629813322}
   - component: {fileID: 629813321}
   - component: {fileID: 629813320}
+  - component: {fileID: 629813329}
   m_Layer: 0
   m_Name: Dark_Maximus (1)
   m_TagString: Enemigo
@@ -4625,6 +4654,30 @@ Transform:
   m_Father: {fileID: 1490253545}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &629813329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 629813319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 8245847510694726342, guid: be0b39823921a8f48a755f65c08b05cb, type: 3}
+  - {fileID: 2982144576928713800, guid: 4101ba6a7fed2e94595d4f78ddf100b9, type: 3}
+  - {fileID: 3197233239917844716, guid: 1fd300929583e20459f8f704cf1e132b, type: 3}
+  - {fileID: 806440588189418718, guid: 8ebe23742425d5948ae97b47f8fa4347, type: 3}
+  - {fileID: 1451912135482328085, guid: ceddc7279b6ef1a4d9b9af3f26618cef, type: 3}
+  - {fileID: 7502513860374526818, guid: e0e3ad750cb4b294985e6c6a03a52715, type: 3}
+  - {fileID: 2941436631887182059, guid: 972731f6b4aa1cf48b130a4190720d9f, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &652699726
 GameObject:
   m_ObjectHideFlags: 0
@@ -6387,7 +6440,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.026299875}
+  m_Offset: {x: 0, y: -0.052217886}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6398,7 +6451,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.10741041}
+  m_Size: {x: 0.16, y: 0.055574384}
   m_EdgeRadius: 0
 --- !u!212 &846325210
 SpriteRenderer:
@@ -6461,7 +6514,7 @@ Transform:
   m_GameObject: {fileID: 846325207}
   m_LocalRotation: {x: -0, y: -0, z: 0.70801264, w: 0.7061998}
   m_LocalPosition: {x: 5.843, y: -1.5168, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 212211250}
@@ -6484,6 +6537,7 @@ GameObject:
   - component: {fileID: 848426131}
   - component: {fileID: 848426130}
   - component: {fileID: 848426129}
+  - component: {fileID: 848426133}
   m_Layer: 0
   m_Name: Soldado
   m_TagString: Enemigo
@@ -6689,6 +6743,33 @@ MonoBehaviour:
     m_Bits: 64
   transformJugador: {fileID: 0}
   radioBusqueda: 0.7
+--- !u!114 &848426133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 848426123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 4270355607992330371, guid: a24e73034b76c0841b3004268d070447, type: 3}
+  - {fileID: 2523237949029137694, guid: b3c442fb43d744e478f86a5789e426fd, type: 3}
+  - {fileID: 2651215778894457355, guid: bd83caab5bfc69c4f8cf1147c831d807, type: 3}
+  - {fileID: 6384396631057470011, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+  - {fileID: 6384396631057470011, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+  - {fileID: 6691042382158915525, guid: 81de504e0d54d81428b97977d0053862, type: 3}
+  - {fileID: 7661264861276481594, guid: b174f9701331a0e4682a08e6f65743b0, type: 3}
+  - {fileID: 1451912135482328085, guid: ceddc7279b6ef1a4d9b9af3f26618cef, type: 3}
+  - {fileID: 7502513860374526818, guid: e0e3ad750cb4b294985e6c6a03a52715, type: 3}
+  - {fileID: 3197233239917844716, guid: 1fd300929583e20459f8f704cf1e132b, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &891526114
 GameObject:
   m_ObjectHideFlags: 0
@@ -6831,6 +6912,7 @@ GameObject:
   - component: {fileID: 893328825}
   - component: {fileID: 893328824}
   - component: {fileID: 893328823}
+  - component: {fileID: 893328832}
   m_Layer: 0
   m_Name: Fantasma (1)
   m_TagString: Enemigo
@@ -7036,6 +7118,31 @@ Transform:
   m_Father: {fileID: 1490253545}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &893328832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 893328822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 4270355607992330371, guid: a24e73034b76c0841b3004268d070447, type: 3}
+  - {fileID: 6691042382158915525, guid: 81de504e0d54d81428b97977d0053862, type: 3}
+  - {fileID: 7661264861276481594, guid: b174f9701331a0e4682a08e6f65743b0, type: 3}
+  - {fileID: 6384396631057470011, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+  - {fileID: 2503349854847614922, guid: 2d07b59bf3a96134a8fabcc2a053b646, type: 3}
+  - {fileID: 735104208820298828, guid: 67740f5d560bbef4daa550daa9ac92c6, type: 3}
+  - {fileID: 806440588189418718, guid: 8ebe23742425d5948ae97b47f8fa4347, type: 3}
+  - {fileID: 1451912135482328085, guid: ceddc7279b6ef1a4d9b9af3f26618cef, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &908531321
 GameObject:
   m_ObjectHideFlags: 0
@@ -7855,7 +7962,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.026299875}
+  m_Offset: {x: 0, y: -0.05221891}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7866,7 +7973,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.10741041}
+  m_Size: {x: 0.16, y: 0.05557234}
   m_EdgeRadius: 0
 --- !u!212 &962898272
 SpriteRenderer:
@@ -7928,8 +8035,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 962898269}
   m_LocalRotation: {x: -0, y: -0, z: 0.70801264, w: 0.7061998}
-  m_LocalPosition: {x: 5.843, y: -1.675, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.842, y: -1.675, z: 0}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 212211250}
@@ -9905,6 +10012,7 @@ GameObject:
   - component: {fileID: 1225013886}
   - component: {fileID: 1225013885}
   - component: {fileID: 1225013884}
+  - component: {fileID: 1225013889}
   m_Layer: 0
   m_Name: dragon_esqueleto
   m_TagString: Enemigo
@@ -10110,6 +10218,34 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1225013889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225013879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 4270355607992330371, guid: a24e73034b76c0841b3004268d070447, type: 3}
+  - {fileID: 2523237949029137694, guid: b3c442fb43d744e478f86a5789e426fd, type: 3}
+  - {fileID: 2523237949029137694, guid: b3c442fb43d744e478f86a5789e426fd, type: 3}
+  - {fileID: 7190417954956026523, guid: a9098387338dae94a88fef3ba5d37e89, type: 3}
+  - {fileID: 6464938213288254887, guid: cd1b8c7cd0ab9804e94bf0fe58937e06, type: 3}
+  - {fileID: 86906351076457881, guid: dbcfdb0c1b7a1264b80c9d79fda16b8c, type: 3}
+  - {fileID: 6691042382158915525, guid: 81de504e0d54d81428b97977d0053862, type: 3}
+  - {fileID: 3197233239917844716, guid: 1fd300929583e20459f8f704cf1e132b, type: 3}
+  - {fileID: 6532384969457569552, guid: b148eb9b06335844fb365660accb7a0a, type: 3}
+  - {fileID: 1451912135482328085, guid: ceddc7279b6ef1a4d9b9af3f26618cef, type: 3}
+  - {fileID: 6691042382158915525, guid: 81de504e0d54d81428b97977d0053862, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1235843684
 GameObject:
   m_ObjectHideFlags: 0
@@ -11218,7 +11354,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidadEnemigos: 0
   enemigosEliminados: 0
-  nombreMenuNiveles: Menu_Niveles
 --- !u!95 &1357533271
 Animator:
   serializedVersion: 5
@@ -11989,7 +12124,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.026299875}
+  m_Offset: {x: 0, y: -0.050554454}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12000,7 +12135,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.16, y: 0.10741041}
+  m_Size: {x: 0.16, y: 0.058901247}
   m_EdgeRadius: 0
 --- !u!212 &1496990851
 SpriteRenderer:
@@ -12063,7 +12198,7 @@ Transform:
   m_GameObject: {fileID: 1496990848}
   m_LocalRotation: {x: -0, y: -0, z: 0.70801264, w: 0.7061998}
   m_LocalPosition: {x: 5.843, y: -1.044, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 212211250}
@@ -13373,6 +13508,7 @@ GameObject:
   - component: {fileID: 1638906356}
   - component: {fileID: 1638906355}
   - component: {fileID: 1638906354}
+  - component: {fileID: 1638906358}
   m_Layer: 0
   m_Name: Fantasma
   m_TagString: Enemigo
@@ -13578,6 +13714,31 @@ MonoBehaviour:
     m_Bits: 64
   transformJugador: {fileID: 0}
   radioBusqueda: 0.7
+--- !u!114 &1638906358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638906348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 8502607807027404331, guid: 08debf2e21d4fbb47be3df1b292cecf3, type: 3}
+  - {fileID: 806440588189418718, guid: 8ebe23742425d5948ae97b47f8fa4347, type: 3}
+  - {fileID: 1451912135482328085, guid: ceddc7279b6ef1a4d9b9af3f26618cef, type: 3}
+  - {fileID: 6691042382158915525, guid: 81de504e0d54d81428b97977d0053862, type: 3}
+  - {fileID: 7661264861276481594, guid: b174f9701331a0e4682a08e6f65743b0, type: 3}
+  - {fileID: 6384396631057470011, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+  - {fileID: 2503349854847614922, guid: 2d07b59bf3a96134a8fabcc2a053b646, type: 3}
+  - {fileID: 4270355607992330371, guid: a24e73034b76c0841b3004268d070447, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1655350089
 GameObject:
   m_ObjectHideFlags: 0
@@ -14123,6 +14284,7 @@ GameObject:
   - component: {fileID: 1677359388}
   - component: {fileID: 1677359387}
   - component: {fileID: 1677359386}
+  - component: {fileID: 1677359395}
   m_Layer: 0
   m_Name: Eskeleto (1)
   m_TagString: Enemigo
@@ -14328,6 +14490,32 @@ Transform:
   m_Father: {fileID: 1490253545}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1677359395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1677359385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 2982144576928713800, guid: 4101ba6a7fed2e94595d4f78ddf100b9, type: 3}
+  - {fileID: 3197233239917844716, guid: 1fd300929583e20459f8f704cf1e132b, type: 3}
+  - {fileID: 8245847510694726342, guid: be0b39823921a8f48a755f65c08b05cb, type: 3}
+  - {fileID: 6532384969457569552, guid: b148eb9b06335844fb365660accb7a0a, type: 3}
+  - {fileID: 1451912135482328085, guid: ceddc7279b6ef1a4d9b9af3f26618cef, type: 3}
+  - {fileID: 6384396631057470011, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+  - {fileID: 2503349854847614922, guid: 2d07b59bf3a96134a8fabcc2a053b646, type: 3}
+  - {fileID: 6691042382158915525, guid: 81de504e0d54d81428b97977d0053862, type: 3}
+  - {fileID: 7661264861276481594, guid: b174f9701331a0e4682a08e6f65743b0, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1691543043
 GameObject:
   m_ObjectHideFlags: 0
@@ -18368,6 +18556,7 @@ GameObject:
   - component: {fileID: 1905736699}
   - component: {fileID: 1905736698}
   - component: {fileID: 1905736697}
+  - component: {fileID: 1905736701}
   m_Layer: 0
   m_Name: Eskeleto
   m_TagString: Enemigo
@@ -18573,6 +18762,33 @@ MonoBehaviour:
     m_Bits: 64
   transformJugador: {fileID: 0}
   radioBusqueda: 0.7
+--- !u!114 &1905736701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905736691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 4270355607992330371, guid: a24e73034b76c0841b3004268d070447, type: 3}
+  - {fileID: 6691042382158915525, guid: 81de504e0d54d81428b97977d0053862, type: 3}
+  - {fileID: 7661264861276481594, guid: b174f9701331a0e4682a08e6f65743b0, type: 3}
+  - {fileID: 1451912135482328085, guid: ceddc7279b6ef1a4d9b9af3f26618cef, type: 3}
+  - {fileID: 2941436631887182059, guid: 972731f6b4aa1cf48b130a4190720d9f, type: 3}
+  - {fileID: 7502513860374526818, guid: e0e3ad750cb4b294985e6c6a03a52715, type: 3}
+  - {fileID: 8502607807027404331, guid: 08debf2e21d4fbb47be3df1b292cecf3, type: 3}
+  - {fileID: 806440588189418718, guid: 8ebe23742425d5948ae97b47f8fa4347, type: 3}
+  - {fileID: 8245847510694726342, guid: be0b39823921a8f48a755f65c08b05cb, type: 3}
+  - {fileID: 2982144576928713800, guid: 4101ba6a7fed2e94595d4f78ddf100b9, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1915441171
 GameObject:
   m_ObjectHideFlags: 0

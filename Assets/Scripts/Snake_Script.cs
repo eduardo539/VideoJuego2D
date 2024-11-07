@@ -21,12 +21,14 @@ public class Snake_Script : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator; // Referencia al componente Animator
 
+
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>(); // Obtener el componente Animator
-        ataqueEnemigo = GetComponent<Ataque_Enemigo>(); // Referencia al script de ataque del goblin
+        ataqueEnemigo = GetComponent<Ataque_Enemigo>(); // Referencia al script de ataque
     }
 
     private void Update()

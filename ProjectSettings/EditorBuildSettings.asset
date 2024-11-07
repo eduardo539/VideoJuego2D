@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu_Instrucciones.unity
     guid: ea731cd41b15e844fb8d5b8e386cea36
+  - enabled: 1
+    path: Assets/Scenes/Puntajes.unity
+    guid: 1ebd179d85f700947bf0a148291758dd
   m_configObjects: {}

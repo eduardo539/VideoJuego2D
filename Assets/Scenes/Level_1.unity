@@ -6360,6 +6360,7 @@ GameObject:
   - component: {fileID: 1304093731}
   - component: {fileID: 1304093732}
   - component: {fileID: 1304093733}
+  - component: {fileID: 1304093734}
   m_Layer: 0
   m_Name: Snake
   m_TagString: Enemigo
@@ -6565,6 +6566,31 @@ MonoBehaviour:
   controlador_Ataque: {fileID: 1989818564}
   radioGolpe: 0.3
   danoGolpe: 10
+--- !u!114 &1304093734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304093722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 5688354904659504386, guid: e56a57baacf6bb940a1a16180dcc9033, type: 3}
+  - {fileID: 9057273026853244910, guid: 6f8bc33f263820c4b8d0e217b4531c0b, type: 3}
+  - {fileID: 735104208820298828, guid: 67740f5d560bbef4daa550daa9ac92c6, type: 3}
+  - {fileID: 5691042613816795990, guid: 9023fd55c77a59b41a1b3124ecde8390, type: 3}
+  - {fileID: 884321553435730477, guid: a987a19400c97a44fb7a412224d9ae88, type: 3}
+  - {fileID: 2308682068062766438, guid: a406884e817bb0547b62281f4b63319b, type: 3}
+  - {fileID: 2651215778894457355, guid: bd83caab5bfc69c4f8cf1147c831d807, type: 3}
+  - {fileID: 4080153412852728706, guid: 1ebb1fd54d29c2043aad05bbd61903d4, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1310787068
 GameObject:
   m_ObjectHideFlags: 0
@@ -7279,6 +7305,7 @@ GameObject:
   - component: {fileID: 1474445297}
   - component: {fileID: 1474445298}
   - component: {fileID: 1474445299}
+  - component: {fileID: 1474445300}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Enemigo
@@ -7484,6 +7511,29 @@ MonoBehaviour:
   controlador_Ataque: {fileID: 1692774134}
   radioGolpe: 0.3
   danoGolpe: 7
+--- !u!114 &1474445300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1474445290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 5688354904659504386, guid: e56a57baacf6bb940a1a16180dcc9033, type: 3}
+  - {fileID: 9057273026853244910, guid: 6f8bc33f263820c4b8d0e217b4531c0b, type: 3}
+  - {fileID: 735104208820298828, guid: 67740f5d560bbef4daa550daa9ac92c6, type: 3}
+  - {fileID: 884321553435730477, guid: a987a19400c97a44fb7a412224d9ae88, type: 3}
+  - {fileID: 2308682068062766438, guid: a406884e817bb0547b62281f4b63319b, type: 3}
+  - {fileID: 2435406189272889997, guid: 3a74b0eac6aea9a4386c40cccfdc7e6b, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1531555151
 GameObject:
   m_ObjectHideFlags: 0
@@ -8188,6 +8238,7 @@ GameObject:
   - component: {fileID: 1668914834}
   - component: {fileID: 1668914833}
   - component: {fileID: 1668914832}
+  - component: {fileID: 1668914841}
   m_Layer: 0
   m_Name: Snake (1)
   m_TagString: Enemigo
@@ -8393,6 +8444,33 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1668914841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1668914831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 2503349854847614922, guid: 2d07b59bf3a96134a8fabcc2a053b646, type: 3}
+  - {fileID: 4080153412852728706, guid: 1ebb1fd54d29c2043aad05bbd61903d4, type: 3}
+  - {fileID: 2651215778894457355, guid: bd83caab5bfc69c4f8cf1147c831d807, type: 3}
+  - {fileID: 5688354904659504386, guid: e56a57baacf6bb940a1a16180dcc9033, type: 3}
+  - {fileID: 9057273026853244910, guid: 6f8bc33f263820c4b8d0e217b4531c0b, type: 3}
+  - {fileID: 735104208820298828, guid: 67740f5d560bbef4daa550daa9ac92c6, type: 3}
+  - {fileID: 5691042613816795990, guid: 9023fd55c77a59b41a1b3124ecde8390, type: 3}
+  - {fileID: 884321553435730477, guid: a987a19400c97a44fb7a412224d9ae88, type: 3}
+  - {fileID: 2308682068062766438, guid: a406884e817bb0547b62281f4b63319b, type: 3}
+  - {fileID: 2435406189272889997, guid: 3a74b0eac6aea9a4386c40cccfdc7e6b, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1686363122
 GameObject:
   m_ObjectHideFlags: 0
@@ -8519,7 +8597,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidadEnemigos: 0
   enemigosEliminados: 0
-  nombreMenuNiveles: Menu_Niveles
 --- !u!1 &1692774133
 GameObject:
   m_ObjectHideFlags: 0
@@ -9216,6 +9293,7 @@ GameObject:
   - component: {fileID: 1811453261}
   - component: {fileID: 1811453260}
   - component: {fileID: 1811453259}
+  - component: {fileID: 1811453268}
   m_Layer: 0
   m_Name: Goblin (1)
   m_TagString: Enemigo
@@ -9421,6 +9499,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1811453268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1811453258}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 5688354904659504386, guid: e56a57baacf6bb940a1a16180dcc9033, type: 3}
+  - {fileID: 2435406189272889997, guid: 3a74b0eac6aea9a4386c40cccfdc7e6b, type: 3}
+  - {fileID: 2308682068062766438, guid: a406884e817bb0547b62281f4b63319b, type: 3}
+  - {fileID: 884321553435730477, guid: a987a19400c97a44fb7a412224d9ae88, type: 3}
+  - {fileID: 5691042613816795990, guid: 9023fd55c77a59b41a1b3124ecde8390, type: 3}
+  - {fileID: 735104208820298828, guid: 67740f5d560bbef4daa550daa9ac92c6, type: 3}
+  - {fileID: 9057273026853244910, guid: 6f8bc33f263820c4b8d0e217b4531c0b, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1812465972
 GameObject:
   m_ObjectHideFlags: 0
@@ -10781,6 +10883,7 @@ GameObject:
   - component: {fileID: 2123593065}
   - component: {fileID: 2123593066}
   - component: {fileID: 2123593067}
+  - component: {fileID: 2123593068}
   m_Layer: 0
   m_Name: Groot_ent
   m_TagString: Enemigo
@@ -10986,6 +11089,31 @@ MonoBehaviour:
   controlador_Ataque: {fileID: 211544117}
   radioGolpe: 0.35
   danoGolpe: 15
+--- !u!114 &2123593068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2123593056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 735104208820298828, guid: 67740f5d560bbef4daa550daa9ac92c6, type: 3}
+  - {fileID: 2503349854847614922, guid: 2d07b59bf3a96134a8fabcc2a053b646, type: 3}
+  - {fileID: 6384396631057470011, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+  - {fileID: 7661264861276481594, guid: b174f9701331a0e4682a08e6f65743b0, type: 3}
+  - {fileID: 8502607807027404331, guid: 08debf2e21d4fbb47be3df1b292cecf3, type: 3}
+  - {fileID: 884321553435730477, guid: a987a19400c97a44fb7a412224d9ae88, type: 3}
+  - {fileID: 806440588189418718, guid: 8ebe23742425d5948ae97b47f8fa4347, type: 3}
+  - {fileID: 2435406189272889997, guid: 3a74b0eac6aea9a4386c40cccfdc7e6b, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &2135526413
 GameObject:
   m_ObjectHideFlags: 0

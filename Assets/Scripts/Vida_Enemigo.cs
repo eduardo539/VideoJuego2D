@@ -9,10 +9,13 @@ public class Vida_Enemigo : MonoBehaviour
     private Salida_Level1 salida1;
     private bool estaMuerto = false; // Para evitar que se ejecute varias veces la muerte
 
+    private Drops_Aleatorios dropsAleatorios;
+
     private void Start()
     {
         animator = GetComponent<Animator>();
         salida1 = FindObjectOfType<Salida_Level1>();
+        dropsAleatorios = GetComponent<Drops_Aleatorios>();
     }
 
     public void TomarDano(float dano)
@@ -42,5 +45,6 @@ public class Vida_Enemigo : MonoBehaviour
     {
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
+        dropsAleatorios.SoltarDrop();  // Llama al método de drops
     }
 }

@@ -11,8 +11,6 @@ public class Salida_Level1 : MonoBehaviour
     private Maximus_Script maximus; // Referencia al script del jugador
     private Aria_Script aria; // Referencia al script del jugador
 
-    // Nombre de la escena del menú de niveles (asegúrate de que coincida con el nombre en los Build Settings)
-    [SerializeField] private string nombreMenuNiveles = "Menu_Niveles";
 
     void Start()
     {
@@ -68,10 +66,11 @@ public class Salida_Level1 : MonoBehaviour
     private IEnumerator EsperaSalida()
     {
         // Espera 1 segundo
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(0.5f);
+        aria.DesbloquearControles();
         
         // Cambiar a la escena del menú de niveles
-        SceneManager.LoadScene(nombreMenuNiveles);
+        SceneManager.LoadScene("Menu_Niveles");
     }
 
 

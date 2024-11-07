@@ -1939,7 +1939,7 @@ Transform:
   - {fileID: 1062279363}
   - {fileID: 1751484157}
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &211085062
 GameObject:
@@ -2200,7 +2200,7 @@ Transform:
   m_Children:
   - {fileID: 1313068221}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &232259919
 GameObject:
@@ -3231,7 +3231,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &336128213
 GameObject:
@@ -3631,7 +3631,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &362215310
 GameObject:
@@ -3765,6 +3765,7 @@ GameObject:
   - component: {fileID: 377670409}
   - component: {fileID: 377670408}
   - component: {fileID: 377670407}
+  - component: {fileID: 377670413}
   m_Layer: 0
   m_Name: Oso
   m_TagString: Enemigo
@@ -3839,7 +3840,7 @@ Transform:
   - {fileID: 1366794246}
   - {fileID: 1505681633}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &377670406
 Animator:
@@ -3970,6 +3971,32 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &377670413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377670403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 7661264861276481594, guid: b174f9701331a0e4682a08e6f65743b0, type: 3}
+  - {fileID: 6691042382158915525, guid: 81de504e0d54d81428b97977d0053862, type: 3}
+  - {fileID: 2503349854847614922, guid: 2d07b59bf3a96134a8fabcc2a053b646, type: 3}
+  - {fileID: 6384396631057470011, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+  - {fileID: 7502513860374526818, guid: e0e3ad750cb4b294985e6c6a03a52715, type: 3}
+  - {fileID: 2941436631887182059, guid: 972731f6b4aa1cf48b130a4190720d9f, type: 3}
+  - {fileID: 1451912135482328085, guid: ceddc7279b6ef1a4d9b9af3f26618cef, type: 3}
+  - {fileID: 6532384969457569552, guid: b148eb9b06335844fb365660accb7a0a, type: 3}
+  - {fileID: 806440588189418718, guid: 8ebe23742425d5948ae97b47f8fa4347, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &385622482
 GameObject:
   m_ObjectHideFlags: 0
@@ -10059,7 +10086,7 @@ Transform:
   - {fileID: 236916317}
   - {fileID: 964425736}
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &586825497
 GameObject:
@@ -10441,7 +10468,7 @@ Transform:
   m_Children:
   - {fileID: 413921039}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611778477
 GameObject:
@@ -10702,7 +10729,7 @@ Transform:
   m_Children:
   - {fileID: 517571088}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &617780523
 GameObject:
@@ -11372,6 +11399,7 @@ GameObject:
   - component: {fileID: 673428930}
   - component: {fileID: 673428929}
   - component: {fileID: 673428934}
+  - component: {fileID: 673428935}
   m_Layer: 0
   m_Name: Goblin
   m_TagString: Enemigo
@@ -11467,7 +11495,7 @@ Transform:
   - {fileID: 1128848893}
   - {fileID: 837207980}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &673428928
 MonoBehaviour:
@@ -11577,6 +11605,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vida: 15
+--- !u!114 &673428935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673428923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 5688354904659504386, guid: e56a57baacf6bb940a1a16180dcc9033, type: 3}
+  - {fileID: 9057273026853244910, guid: 6f8bc33f263820c4b8d0e217b4531c0b, type: 3}
+  - {fileID: 735104208820298828, guid: 67740f5d560bbef4daa550daa9ac92c6, type: 3}
+  - {fileID: 5691042613816795990, guid: 9023fd55c77a59b41a1b3124ecde8390, type: 3}
+  - {fileID: 884321553435730477, guid: a987a19400c97a44fb7a412224d9ae88, type: 3}
+  - {fileID: 2308682068062766438, guid: a406884e817bb0547b62281f4b63319b, type: 3}
+  - {fileID: 2435406189272889997, guid: 3a74b0eac6aea9a4386c40cccfdc7e6b, type: 3}
+  - {fileID: 2941436631887182059, guid: 972731f6b4aa1cf48b130a4190720d9f, type: 3}
+  - {fileID: 2503349854847614922, guid: 2d07b59bf3a96134a8fabcc2a053b646, type: 3}
+  - {fileID: 4080153412852728706, guid: 1ebb1fd54d29c2043aad05bbd61903d4, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &675943690
 GameObject:
   m_ObjectHideFlags: 0
@@ -12000,7 +12055,7 @@ Transform:
   m_Children:
   - {fileID: 1152479507}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &714981027
 Rigidbody2D:
@@ -13632,7 +13687,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &847233847
 GameObject:
@@ -13718,6 +13773,63 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &847671465
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6384396631057470011, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_Name
+      value: Copa2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017670330489620415, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017670330489620415, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 33.752632
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017670330489620415, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.756619
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017670330489620415, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017670330489620415, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017670330489620415, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017670330489620415, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017670330489620415, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017670330489620415, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017670330489620415, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017670330489620415, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
 --- !u!1 &851926531
 GameObject:
   m_ObjectHideFlags: 0
@@ -15689,7 +15801,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &989987767
 Animator:
@@ -15726,7 +15838,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cantidadEnemigos: 0
   enemigosEliminados: 0
-  nombreMenuNiveles: Menu_Niveles
 --- !u!1 &991607000
 GameObject:
   m_ObjectHideFlags: 0
@@ -17337,7 +17448,7 @@ Transform:
   m_Children:
   - {fileID: 1451746400}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1074240154
 GameObject:
@@ -18069,6 +18180,7 @@ GameObject:
   - component: {fileID: 1107157992}
   - component: {fileID: 1107157995}
   - component: {fileID: 1107157994}
+  - component: {fileID: 1107157996}
   - component: {fileID: 1107157993}
   m_Layer: 0
   m_Name: Spider
@@ -18212,7 +18324,7 @@ Transform:
   - {fileID: 950152183}
   - {fileID: 1652890539}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1107157992
 MonoBehaviour:
@@ -18275,6 +18387,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danoContacto: 5
+--- !u!114 &1107157996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1107157986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 5688354904659504386, guid: e56a57baacf6bb940a1a16180dcc9033, type: 3}
+  - {fileID: 9057273026853244910, guid: 6f8bc33f263820c4b8d0e217b4531c0b, type: 3}
+  - {fileID: 735104208820298828, guid: 67740f5d560bbef4daa550daa9ac92c6, type: 3}
+  - {fileID: 5691042613816795990, guid: 9023fd55c77a59b41a1b3124ecde8390, type: 3}
+  - {fileID: 884321553435730477, guid: a987a19400c97a44fb7a412224d9ae88, type: 3}
+  - {fileID: 2308682068062766438, guid: a406884e817bb0547b62281f4b63319b, type: 3}
+  - {fileID: 2435406189272889997, guid: 3a74b0eac6aea9a4386c40cccfdc7e6b, type: 3}
+  - {fileID: 2651215778894457355, guid: bd83caab5bfc69c4f8cf1147c831d807, type: 3}
+  - {fileID: 4080153412852728706, guid: 1ebb1fd54d29c2043aad05bbd61903d4, type: 3}
+  - {fileID: 2503349854847614922, guid: 2d07b59bf3a96134a8fabcc2a053b646, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1108326204
 GameObject:
   m_ObjectHideFlags: 0
@@ -19646,7 +19785,7 @@ Transform:
   m_Children:
   - {fileID: 284876231}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1301336155
 GameObject:
@@ -19858,7 +19997,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1313068220
 GameObject:
@@ -21050,6 +21189,7 @@ GameObject:
   - component: {fileID: 1495115255}
   - component: {fileID: 1495115263}
   - component: {fileID: 1495115262}
+  - component: {fileID: 1495115264}
   - component: {fileID: 1495115261}
   m_Layer: 0
   m_Name: Orco
@@ -21213,7 +21353,7 @@ Transform:
   - {fileID: 1576588632}
   - {fileID: 2132162875}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1495115261
 MonoBehaviour:
@@ -21256,6 +21396,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danoContacto: 5
+--- !u!114 &1495115264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1495115254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 4270355607992330371, guid: a24e73034b76c0841b3004268d070447, type: 3}
+  - {fileID: 2523237949029137694, guid: b3c442fb43d744e478f86a5789e426fd, type: 3}
+  - {fileID: 7190417954956026523, guid: a9098387338dae94a88fef3ba5d37e89, type: 3}
+  - {fileID: 6464938213288254887, guid: cd1b8c7cd0ab9804e94bf0fe58937e06, type: 3}
+  - {fileID: 86906351076457881, guid: dbcfdb0c1b7a1264b80c9d79fda16b8c, type: 3}
+  - {fileID: 6691042382158915525, guid: 81de504e0d54d81428b97977d0053862, type: 3}
+  - {fileID: 1451912135482328085, guid: ceddc7279b6ef1a4d9b9af3f26618cef, type: 3}
+  - {fileID: 3197233239917844716, guid: 1fd300929583e20459f8f704cf1e132b, type: 3}
+  - {fileID: 2982144576928713800, guid: 4101ba6a7fed2e94595d4f78ddf100b9, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1496550200
 GameObject:
   m_ObjectHideFlags: 0
@@ -22868,6 +23034,7 @@ GameObject:
   - component: {fileID: 1615488307}
   - component: {fileID: 1615488306}
   - component: {fileID: 1615488305}
+  - component: {fileID: 1615488308}
   - component: {fileID: 1615488304}
   m_Layer: 0
   m_Name: Dino
@@ -22943,7 +23110,7 @@ Transform:
   - {fileID: 173039863}
   - {fileID: 251104331}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1615488301
 Animator:
@@ -23074,6 +23241,32 @@ MonoBehaviour:
     m_Bits: 64
   transformJugador: {fileID: 0}
   radioBusqueda: 0.7
+--- !u!114 &1615488308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615488298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 8245847510694726342, guid: be0b39823921a8f48a755f65c08b05cb, type: 3}
+  - {fileID: 2982144576928713800, guid: 4101ba6a7fed2e94595d4f78ddf100b9, type: 3}
+  - {fileID: 3197233239917844716, guid: 1fd300929583e20459f8f704cf1e132b, type: 3}
+  - {fileID: 8502607807027404331, guid: 08debf2e21d4fbb47be3df1b292cecf3, type: 3}
+  - {fileID: 806440588189418718, guid: 8ebe23742425d5948ae97b47f8fa4347, type: 3}
+  - {fileID: 2941436631887182059, guid: 972731f6b4aa1cf48b130a4190720d9f, type: 3}
+  - {fileID: 7502513860374526818, guid: e0e3ad750cb4b294985e6c6a03a52715, type: 3}
+  - {fileID: 6384396631057470011, guid: b95ff14a7d900ed458e624b7e4617651, type: 3}
+  - {fileID: 6691042382158915525, guid: 81de504e0d54d81428b97977d0053862, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1625098997
 GameObject:
   m_ObjectHideFlags: 0
@@ -24518,7 +24711,7 @@ Transform:
   - {fileID: 394099560}
   - {fileID: 73315776}
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751484156
 GameObject:
@@ -25166,6 +25359,7 @@ GameObject:
   - component: {fileID: 1801753327}
   - component: {fileID: 1801753330}
   - component: {fileID: 1801753329}
+  - component: {fileID: 1801753331}
   - component: {fileID: 1801753328}
   m_Layer: 0
   m_Name: Snake
@@ -25241,7 +25435,7 @@ Transform:
   - {fileID: 290705872}
   - {fileID: 370399817}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1801753324
 BoxCollider2D:
@@ -25372,6 +25566,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   danoContacto: 2
+--- !u!114 &1801753331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801753321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 5688354904659504386, guid: e56a57baacf6bb940a1a16180dcc9033, type: 3}
+  - {fileID: 9057273026853244910, guid: 6f8bc33f263820c4b8d0e217b4531c0b, type: 3}
+  - {fileID: 735104208820298828, guid: 67740f5d560bbef4daa550daa9ac92c6, type: 3}
+  - {fileID: 5691042613816795990, guid: 9023fd55c77a59b41a1b3124ecde8390, type: 3}
+  - {fileID: 884321553435730477, guid: a987a19400c97a44fb7a412224d9ae88, type: 3}
+  - {fileID: 2308682068062766438, guid: a406884e817bb0547b62281f4b63319b, type: 3}
+  - {fileID: 2435406189272889997, guid: 3a74b0eac6aea9a4386c40cccfdc7e6b, type: 3}
+  - {fileID: 2651215778894457355, guid: bd83caab5bfc69c4f8cf1147c831d807, type: 3}
+  - {fileID: 4080153412852728706, guid: 1ebb1fd54d29c2043aad05bbd61903d4, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1834921899
 GameObject:
   m_ObjectHideFlags: 0
@@ -26145,6 +26365,7 @@ GameObject:
   - component: {fileID: 1891667800}
   - component: {fileID: 1891667799}
   - component: {fileID: 1891667798}
+  - component: {fileID: 1891667807}
   m_Layer: 0
   m_Name: Goblin (1)
   m_TagString: Enemigo
@@ -26348,8 +26569,36 @@ Transform:
   - {fileID: 249987264}
   - {fileID: 1426551513}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1891667807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1891667797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea092116699a4ef4cb73886bf9653629, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosDrop:
+  - {fileID: 2651215778894457355, guid: bd83caab5bfc69c4f8cf1147c831d807, type: 3}
+  - {fileID: 4080153412852728706, guid: 1ebb1fd54d29c2043aad05bbd61903d4, type: 3}
+  - {fileID: 2503349854847614922, guid: 2d07b59bf3a96134a8fabcc2a053b646, type: 3}
+  - {fileID: 7661264861276481594, guid: b174f9701331a0e4682a08e6f65743b0, type: 3}
+  - {fileID: 5688354904659504386, guid: e56a57baacf6bb940a1a16180dcc9033, type: 3}
+  - {fileID: 9057273026853244910, guid: 6f8bc33f263820c4b8d0e217b4531c0b, type: 3}
+  - {fileID: 735104208820298828, guid: 67740f5d560bbef4daa550daa9ac92c6, type: 3}
+  - {fileID: 5691042613816795990, guid: 9023fd55c77a59b41a1b3124ecde8390, type: 3}
+  - {fileID: 884321553435730477, guid: a987a19400c97a44fb7a412224d9ae88, type: 3}
+  - {fileID: 2308682068062766438, guid: a406884e817bb0547b62281f4b63319b, type: 3}
+  - {fileID: 2435406189272889997, guid: 3a74b0eac6aea9a4386c40cccfdc7e6b, type: 3}
+  probabilidadDrop: 0.5
+  tilemapLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1 &1891689424
 GameObject:
   m_ObjectHideFlags: 0
@@ -26519,7 +26768,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1898049073
 Animator:
@@ -27212,7 +27461,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1973851986
 GameObject:
@@ -28452,7 +28701,7 @@ Transform:
   - {fileID: 254824982}
   - {fileID: 973648490}
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2088408913
 GameObject:
@@ -28791,7 +29040,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &2126426872
 Animator:
