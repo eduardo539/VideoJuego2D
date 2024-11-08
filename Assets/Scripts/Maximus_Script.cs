@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Maximus_Script : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class Maximus_Script : MonoBehaviour
 
 
     private bool controlesBloqueados = false; // Flag para bloquear los controles
+
 
     // Se ejecuta al inicio
     void Start()
@@ -131,19 +133,9 @@ public class Maximus_Script : MonoBehaviour
         }
     }
 
-
-    public void Muerte(){
-        Animator.SetTrigger("muerteTrigger");
-        StartCoroutine(EsperaMuerte());
-    }
-
-    private IEnumerator EsperaMuerte()
+    public void Muerte()
     {
-        // Espera 1 segundo
-        yield return new WaitForSeconds(1f);
-        
-        // Destruye el objeto
-        Destroy(gameObject);
+        Animator.SetTrigger("muerteTrigger");
     }
 
 

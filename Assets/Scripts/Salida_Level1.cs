@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System;
 
 public class Salida_Level1 : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class Salida_Level1 : MonoBehaviour
     private Animator animator;
     private Maximus_Script maximus; // Referencia al script del jugador
     private Aria_Script aria; // Referencia al script del jugador
+
+
+    public event EventHandler VictoriaJugador;
 
 
     void Start()
@@ -50,13 +54,16 @@ public class Salida_Level1 : MonoBehaviour
             {
                 maximus.AnimacionSalida();
             }
-            else if(aria != null)
-            {
-                aria.AnimacionSalida();
-            }
             else
             {
-                Debug.LogError("No estan asignados los personajes en el objeto.");
+                if (aria != null)
+                {
+                    aria.AnimacionSalida();
+                }
+                else
+                {
+                    Debug.LogError("No estan asignados los personajes en el objeto.");
+                }
             }
             StartCoroutine(EsperaSalida());
         }
@@ -67,10 +74,8 @@ public class Salida_Level1 : MonoBehaviour
     {
         // Espera 1 segundo
         yield return new WaitForSeconds(0.5f);
-        aria.DesbloquearControles();
+        VictoriaJugador?.Invoke(this, EventArgs.Empty);
         
-        // Cambiar a la escena del menú de niveles
-        SceneManager.LoadScene("Menu_Niveles");
     }
 
 

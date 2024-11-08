@@ -19,6 +19,7 @@ public class Aria_Script : MonoBehaviour
     [SerializeField] private float tiempoEntreAtaques;
     [SerializeField] private float tiempoSiguienteAtaque;
 
+
     private bool controlesBloqueados = false; // Flag para bloquear los controles
 
 
@@ -146,16 +147,6 @@ public class Aria_Script : MonoBehaviour
 
     public void Muerte(){
         Animator.SetTrigger("muerteTrigger");
-        StartCoroutine(EsperaMuerte());
-    }
-
-    private IEnumerator EsperaMuerte()
-    {
-        // Espera 1 segundo
-        yield return new WaitForSeconds(1f);
-        
-        // Destruye el objeto
-        Destroy(gameObject);
     }
 
     public void Empujar(Vector2 puntoDeContacto)

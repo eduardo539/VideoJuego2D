@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Vida_Player : MonoBehaviour
 {
@@ -10,6 +11,10 @@ public class Vida_Player : MonoBehaviour
     private Maximus_Script maximus; // Referencia al script del jugador
     private Animator animator; // Referencia al Animator del jugador
 
+    private Puntaje_Script puntaje;
+
+    public event EventHandler MuerteJugador;
+
     void Start()
     {
 
@@ -17,6 +22,7 @@ public class Vida_Player : MonoBehaviour
         barraVida = FindObjectOfType<Barra_Vida>();
         maximus = GetComponent<Maximus_Script>();
         animator = GetComponent<Animator>();
+        puntaje = FindObjectOfType<Puntaje_Script>();
 
         BarraVida();
     }
@@ -55,6 +61,7 @@ public class Vida_Player : MonoBehaviour
         if (vida <= 0)
         {
             maximus.Muerte();
+            StartCoroutine(EsperaMuerte());
         }
     }
 
@@ -78,9 +85,19 @@ public class Vida_Player : MonoBehaviour
         // Verificar si la vida llegó a cero
         if (vida <= 0)
         {
-            // Lógica de muerte
-            Destroy(gameObject);
+            maximus.Muerte();
+            StartCoroutine(EsperaMuerte());
         }
+    }
+
+    private IEnumerator EsperaMuerte()
+    {
+        // Espera 1 segundo
+        yield return new WaitForSeconds(1f);
+        MuerteJugador?.Invoke(this, EventArgs.Empty);
+        puntaje.ResetearPuntosTemporales();
+        // Destruye el objeto
+        Destroy(gameObject);
     }
 
     // Método para curar al jugador

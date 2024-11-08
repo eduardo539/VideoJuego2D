@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+
+
 
 public class Vida_Aria : MonoBehaviour
 {
@@ -11,6 +14,10 @@ public class Vida_Aria : MonoBehaviour
     private Aria_Script aria; // Referencia al script del jugador
     private Animator animator; // Referencia al Animator del jugador
 
+    private Puntaje_Script puntaje;
+
+    public event EventHandler MuerteJugador;
+
     void Start()
     {
 
@@ -18,6 +25,7 @@ public class Vida_Aria : MonoBehaviour
         barraVida = FindObjectOfType<Barra_Vida>();
         aria = GetComponent<Aria_Script>();
         animator = GetComponent<Animator>();
+        puntaje = FindObjectOfType<Puntaje_Script>();
 
         BarraVida();
     }
@@ -56,6 +64,7 @@ public class Vida_Aria : MonoBehaviour
         if (vida <= 0)
         {
             aria.Muerte();
+            StartCoroutine(EsperaMuerte());
         }
     }
 
@@ -79,10 +88,23 @@ public class Vida_Aria : MonoBehaviour
         // Verificar si la vida llegó a cero
         if (vida <= 0)
         {
-            // Lógica de muerte
-            Destroy(gameObject);
+            aria.Muerte();
+            StartCoroutine(EsperaMuerte());
         }
     }
+
+
+    private IEnumerator EsperaMuerte()
+    {
+        // Espera 1 segundo
+        yield return new WaitForSeconds(1f);
+        MuerteJugador?.Invoke(this, EventArgs.Empty);
+        puntaje.ResetearPuntosTemporales();
+        // Destruye el objeto
+        Destroy(gameObject);
+    }
+
+
 
     // Método para curar al jugador
     public void Curar(float cantidadCura)

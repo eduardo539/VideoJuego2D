@@ -24,12 +24,20 @@ public class Frutas_Script : MonoBehaviour
     // Método que se llama cuando otro objeto entra en el trigger del collider de la fruta
     private void OnTriggerEnter2D(Collider2D other)
     {
-        // Verifica si el objeto que tocó la fruta tiene la etiqueta "Player"
         if (other.CompareTag("Player"))
         {
-            frutasPuntos.SumarPuntos(puntosEntrada);
-            // Destruye el objeto de la fruta
+            if (frutasPuntos != null)
+            {
+                frutasPuntos.SumarPuntos(puntosEntrada);
+            }
+            else
+            {
+                Debug.LogWarning("No se puede sumar puntos porque frutasPuntos no está inicializado.");
+            }
+
             Destroy(gameObject);
         }
     }
+
+
 }

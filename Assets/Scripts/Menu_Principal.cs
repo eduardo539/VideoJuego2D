@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System;
 
 public class Menu_Principal : MonoBehaviour
 {
@@ -10,8 +11,15 @@ public class Menu_Principal : MonoBehaviour
     public RectTransform selector;     // Referencia al objeto selector
     private int indiceActual = 0;      // Índice del botón actualmente seleccionado
 
+    public event EventHandler alertaNewJuego;
+
+    private Puntaje_Script puntaje;
+
+
+
     void Start()
     {
+        puntaje = FindObjectOfType<Puntaje_Script>();
         // Inicializa el selector en el primer botón
         MoverSelector();
     }
@@ -92,8 +100,18 @@ public class Menu_Principal : MonoBehaviour
 
     public void NuevoJuego()
     {
+        alertaNewJuego?.Invoke(this, EventArgs.Empty);
+        //puntaje.ReiniciarPuntaje();
+        //SceneManager.LoadScene("Menu_Personajes");
+    }
+
+
+    public void Aceptar()
+    {
+        puntaje.ResetearPuntosTemporales();
         SceneManager.LoadScene("Menu_Personajes");
     }
+
 
     public void Puntajes()
     {
