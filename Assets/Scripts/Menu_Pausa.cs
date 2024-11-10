@@ -8,8 +8,12 @@ public class Menu_Pausa : MonoBehaviour
     [SerializeField] private GameObject botonPause;
     [SerializeField] private GameObject menuPausa;
 
+
+    private Puntaje_Script puntaje;
+
     void Start()
     {
+        puntaje = FindObjectOfType<Puntaje_Script>();
         // Asegúrate de que el juego esté en tiempo normal y el menú de pausa esté oculto
         Time.timeScale = 1f;
         botonPause.SetActive(true);
@@ -38,7 +42,8 @@ public class Menu_Pausa : MonoBehaviour
 
     public void Salir()
     {
-        Debug.Log("Cerrando el juego");
-        Application.Quit();
+        Debug.Log("Regresando al menú de niveles");
+        puntaje.ResetearPuntosTemporales();
+        SceneManager.LoadScene("Menu_Niveles"); // Cambia "Menu_Niveles" por el nombre exacto de tu escena de menú de niveles
     }
 }

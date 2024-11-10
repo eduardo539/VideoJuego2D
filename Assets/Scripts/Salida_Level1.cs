@@ -18,8 +18,7 @@ public class Salida_Level1 : MonoBehaviour
 
     void Start()
     {
-        maximus = FindObjectOfType<Maximus_Script>();
-        aria = FindObjectOfType<Aria_Script>();
+
         animator = GetComponent<Animator>();
         cantidadEnemigos = GameObject.FindGameObjectsWithTag("Enemigo").Length;
     }
@@ -48,14 +47,18 @@ public class Salida_Level1 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+
         if (other.CompareTag("Player") && enemigosEliminados == cantidadEnemigos)
         {
+            maximus = FindObjectOfType<Maximus_Script>();
             if (maximus != null)
             {
                 maximus.AnimacionSalida();
             }
             else
             {
+                aria = FindObjectOfType<Aria_Script>();
+
                 if (aria != null)
                 {
                     aria.AnimacionSalida();

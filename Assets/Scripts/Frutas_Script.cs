@@ -9,12 +9,9 @@ public class Frutas_Script : MonoBehaviour
 
     [SerializeField] private float puntosEntrada;
 
-    void Start()
+    void Awake()
     {
-        // Encuentra el objeto que contiene el script Puntaje_Script en la escena
         frutasPuntos = FindObjectOfType<Puntaje_Script>();
-
-        // Verifica si se encontró el script de puntaje
         if (frutasPuntos == null)
         {
             Debug.LogError("No se encontró el script Puntaje_Script en la escena.");
@@ -41,3 +38,23 @@ public class Frutas_Script : MonoBehaviour
 
 
 }
+
+
+/*
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            if (frutasPuntos != null)
+            {
+                frutasPuntos.SumarPuntos(puntosEntrada);
+            }
+            else
+            {
+                Debug.LogWarning("No se puede sumar puntos porque frutasPuntos no está inicializado.");
+            }
+
+            Destroy(gameObject);
+        }
+    }
+*/

@@ -51,7 +51,8 @@ public class Alerta_NuevoJuego : MonoBehaviour
 
     public void Cancelar()
     {
-        SceneManager.LoadScene("Menu_Principal");
+        //SceneManager.LoadScene("Menu_Principal");
+        alertaNewJuego.SetActive(false); // Cierra solo la ventana de alerta
     }
     
 }

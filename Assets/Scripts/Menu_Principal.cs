@@ -15,17 +15,23 @@ public class Menu_Principal : MonoBehaviour
 
     private Puntaje_Script puntaje;
 
+    private Puntaje_Victoria puntajeVictoria;
+
 
 
     void Start()
     {
         puntaje = FindObjectOfType<Puntaje_Script>();
+        puntajeVictoria = FindObjectOfType<Puntaje_Victoria>();
         // Inicializa el selector en el primer botón
         MoverSelector();
+        PuntosTemporales();
     }
 
     void Update()
     {
+        PuntosTemporales();
+
         // Navegar hacia arriba con la tecla W
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -125,8 +131,16 @@ public class Menu_Principal : MonoBehaviour
 
     public void Salir()
     {
-        Application.Quit(); // Esto cierra la aplicación
+        Application.Quit();
     }
+
+    public void PuntosTemporales()
+    {
+        puntajeVictoria.MostrarPuntosText();
+    }
+
+
+
 }
 
 

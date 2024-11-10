@@ -382,13 +382,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "========== INSTRUCCIONES ==========\r\n\r\n- Movimiento:\r\n   - Presiona
-    **A** para moverte a la izquierda.\r\n   - Presiona **D** para moverte a la derecha.\r\n\r\n-
-    Saltar:\r\n   - Presiona **W** para saltar.\r\n   - Presiona **W** dos veces
-    r\xE1pidamente para realizar un salto doble.\r\n\r\n- Ataque:\r\n   - Presiona
-    **K** para atacar a los enemigos.\r\n\r\n- Navegaci\xF3n en Men\xFAs:\r\n   -
-    Usa el **mouse** para seleccionar opciones en el men\xFA.\r\n   - Alternativamente,
-    usa **W** y **S** para moverte hacia arriba y abajo en el men\xFA.\r\n   - Presiona
-    **Enter** para seleccionar una opci\xF3n en el men\xFA.\r\n\r\n===================================\r\n"
+    'A' para moverte a la izquierda.\r\n   - Presiona 'D' para moverte a la derecha.\r\n\r\n-
+    Saltar:\r\n   - Presiona 'W' para saltar.\r\n   - Presiona 'W' dos veces seguidas
+    para realizar un salto doble.\r\n\r\n- Ataque:\r\n   - Presiona 'K' para atacar
+    a los enemigos.\r\n\r\n- Navegaci\xF3n en Men\xFAs:\r\n   - Usa el 'mouse' para
+    seleccionar opciones en el men\xFA.\r\n   - Alternativamente, usa 'W' y 'S' para
+    moverte hacia arriba y abajo en el men\xFA.\r\n   - Presiona 'Enter' para seleccionar
+    una opci\xF3n en el men\xFA.\r\n\r\n===================================\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 011af2ec877b65d45b415d4788a9dd10, type: 2}
   m_sharedMaterial: {fileID: 1071817791295911384, guid: 011af2ec877b65d45b415d4788a9dd10, type: 2}

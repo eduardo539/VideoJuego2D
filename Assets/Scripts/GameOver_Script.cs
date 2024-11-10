@@ -7,6 +7,7 @@ using System;
 
 public class GameOver_Script : MonoBehaviour
 {
+
     [SerializeField] private GameObject menuGameOver;
 
     private Vida_Player vidaMaximus;
@@ -57,6 +58,12 @@ public class GameOver_Script : MonoBehaviour
     public void ActivarMenu(object sender, EventArgs e)
     {
         menuGameOver.SetActive(true);
+        
+    }
+
+    private void EnviarDatosGuardar()
+    {
+        puntaje.enviarDatosyGuardar();
     }
 
     public void Reiniciar()
@@ -72,10 +79,8 @@ public class GameOver_Script : MonoBehaviour
 
     public void Salir()
     {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        EnviarDatosGuardar();
+        puntaje.ReiniciarPuntaje();
+        SceneManager.LoadScene("Menu_Personajes");
     }
 }

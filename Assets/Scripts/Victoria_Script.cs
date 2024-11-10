@@ -15,17 +15,18 @@ public class Victoria_Script : MonoBehaviour
     private Puntaje_Script puntaje;
 
 
-
     void Start()
     {
+
         puntaje = FindObjectOfType<Puntaje_Script>();
 
         menuVictoria.SetActive(false);
-        
-        
+
         GameObject player = GameObject.FindGameObjectWithTag("Salida_1");
+        
         if (player != null)
         {
+
             salidaNivel = player.GetComponent<Salida_Level1>();
             if (salidaNivel != null)
             {
@@ -43,9 +44,17 @@ public class Victoria_Script : MonoBehaviour
 
     }
 
+
+
     public void ActivarMenu(object sender, EventArgs e)
     {
         menuVictoria.SetActive(true);
+        EnviaDatos();
+    }
+
+    private void EnviaDatos()
+    {
+        puntaje.enviarPuntos();
     }
 
 

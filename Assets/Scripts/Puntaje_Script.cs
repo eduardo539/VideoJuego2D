@@ -10,13 +10,17 @@ public class Puntaje_Script : MonoBehaviour
     private float puntosTemporales;    // Puntaje temporal del nivel actual
     private TextMeshProUGUI textMesh;
 
+    private Puntaje_Victoria puntajeVic;
 
+    private Manager_Records recordsDatos;
 
     void Start()
     {
         // Cargar el puntaje guardado al inicio
         puntos = PlayerPrefs.GetFloat("PuntajeGuardado", 0f);
 
+        puntajeVic = FindObjectOfType<Puntaje_Victoria>();
+        recordsDatos = FindObjectOfType<Manager_Records>();
         textMesh = GetComponent<TextMeshProUGUI>();
         ActualizarTextoPuntos();
     }
@@ -64,6 +68,16 @@ public class Puntaje_Script : MonoBehaviour
         PlayerPrefs.SetFloat("PuntajeGuardado", 0f); // Reiniciar el puntaje en PlayerPrefs a cero
         PlayerPrefs.Save(); // Asegura que se guarde inmediatamente
         ActualizarTextoPuntos();
+    }
+
+    public void enviarPuntos()
+    {
+        puntajeVic.recibirPuntos(puntosTemporales);
+    }
+
+    public void enviarDatosyGuardar()
+    {
+        recordsDatos.DatosTablaPuntos(puntos);
     }
 
 
