@@ -148,6 +148,13 @@ public class Maximus_Script : MonoBehaviour
     {
         Animator.SetTrigger("salirTrigger");
         controlesBloqueados = true; // Bloquea los controles durante la animación de salida
+
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y); // Detiene el movimiento horizontal actual
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation; // Congela solo el eje X
+        }
     }
     
 

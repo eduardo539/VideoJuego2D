@@ -2459,7 +2459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Speed: 1.5
   FuerzaSalto: 200
-  velocidadRebote: {x: 3, y: 3}
+  velocidadRebote: {x: 4, y: 4}
   tiempoEntreAtaques: 0.6
   tiempoSiguienteAtaque: 0
 --- !u!114 &-7056046249951181209

@@ -18,7 +18,6 @@ public class Salida_Level1 : MonoBehaviour
 
     void Start()
     {
-
         animator = GetComponent<Animator>();
         cantidadEnemigos = GameObject.FindGameObjectsWithTag("Enemigo").Length;
     }
