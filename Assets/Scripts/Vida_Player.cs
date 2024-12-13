@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
+
+
 
 public class Vida_Player : MonoBehaviour
 {
@@ -15,6 +18,9 @@ public class Vida_Player : MonoBehaviour
 
     public event EventHandler MuerteJugador;
 
+
+    public TextMeshProUGUI vidaTexto; // Referencia al TextMeshPro sobre la cabeza
+
     void Start()
     {
 
@@ -25,6 +31,7 @@ public class Vida_Player : MonoBehaviour
         puntaje = FindObjectOfType<Puntaje_Script>();
 
         BarraVida();
+        ActualizarTextoVida();
     }
 
 
@@ -50,6 +57,7 @@ public class Vida_Player : MonoBehaviour
 
         // Ejecutar la animación de golpe
         animator.SetTrigger("golpeTrigger");
+        ActualizarTextoVida();
 
         // Actualizar la barra de vida
         if (barraVida != null)
@@ -77,6 +85,7 @@ public class Vida_Player : MonoBehaviour
         }
 
         animator.SetTrigger("golpeTrigger");
+        ActualizarTextoVida();
         if (maximus != null)
         {
             maximus.Empujar(puntoDeContacto);
@@ -87,6 +96,22 @@ public class Vida_Player : MonoBehaviour
         {
             maximus.Muerte();
             StartCoroutine(EsperaMuerte());
+        }
+    }
+
+
+    private void ActualizarTextoVida()
+    {
+        if (vidaTexto != null)
+        {
+            if(vida > 0)
+            {
+                vidaTexto.text = "" + vida;
+            }
+            else
+            {
+                vidaTexto.text = "" + 0;
+            }
         }
     }
 
@@ -115,6 +140,7 @@ public class Vida_Player : MonoBehaviour
         vida = Mathf.Clamp(vida, 0, maximaVida); // Asegúrate de que no supere la vida máxima
 
         barraVida.CambiarVidaActual(vida); // Actualiza la barra de vida con la nueva cantidad de vida
+        ActualizarTextoVida();
     }
 
     // Método para verificar si la vida no está al máximo

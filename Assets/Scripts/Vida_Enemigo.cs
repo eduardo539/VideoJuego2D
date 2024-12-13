@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Vida_Enemigo : MonoBehaviour
 {
@@ -11,12 +12,24 @@ public class Vida_Enemigo : MonoBehaviour
 
     private Drops_Aleatorios dropsAleatorios;
 
+
+    public TextMeshPro vidaTexto; // Referencia al TextMeshPro 3D sobre la cabeza del enemigo
+
+
     private void Start()
     {
         animator = GetComponent<Animator>();
         salida1 = FindObjectOfType<Salida_Level1>();
         dropsAleatorios = GetComponent<Drops_Aleatorios>();
+        ActualizarTextoVida();
     }
+
+
+    private void Update()
+    {
+        MantenerTextoVisible(); // Actualiza la orientación del texto en cada frame
+    }
+
 
     public void TomarDano(float dano)
     {
@@ -25,10 +38,26 @@ public class Vida_Enemigo : MonoBehaviour
         vida -= dano;
         // Ejecutar la animación de golpe
         animator.SetTrigger("golpeTrigger");
+        ActualizarTextoVida();
 
         if (vida <= 0)
         {
             Muerte();
+        }
+    }
+
+    private void ActualizarTextoVida()
+    {
+        if (vidaTexto != null)
+        {
+            if(vida > 0)
+            {
+                vidaTexto.text = "Vida: " + Mathf.Max(vida, 0); // Asegura que no se muestre negativo
+            }
+            else
+            {
+                vidaTexto.text = "Vida: " + + Mathf.Max(0, 0);
+            }
         }
     }
 
@@ -46,5 +75,14 @@ public class Vida_Enemigo : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         Destroy(gameObject);
         dropsAleatorios.SoltarDrop();  // Llama al método de drops
+    }
+
+    private void MantenerTextoVisible()
+    {
+        if (vidaTexto != null && Camera.main != null)
+        {
+            // Hacemos que el texto siempre mire hacia la cámara
+            vidaTexto.transform.rotation = Quaternion.LookRotation(Camera.main.transform.forward);
+        }
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 77783c27ecbfd55489791e0507f244da
+guid: ed32e03141b0d3c47b1ca26b0c8f600e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -93,13 +93,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: menu_bg_0
+      name: CARRERA_SINFONDO_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 404
-        height: 208
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,8 +107,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05f825c3a424d6e428697dac9aedf431
-      internalID: 584367225
+      spriteID: bfb939b1ab4107c49a06e2cc724a61f1
+      internalID: 1325844975
       vertices: []
       indices: 
       edges: []
@@ -124,7 +124,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      menu_bg_0: 584367225
+      CARRERA_SINFONDO_0: 1325844975
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

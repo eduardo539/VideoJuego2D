@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 
 
@@ -10,13 +11,17 @@ public class Vida_Aria : MonoBehaviour
     
     [SerializeField] private float vida;
     [SerializeField] private float maximaVida;
-    private Barra_Vida barraVida; // Referencia a la barra de vida
+    [SerializeField] private Barra_Vida barraVida; // Referencia a la barra de vida
     private Aria_Script aria; // Referencia al script del jugador
     private Animator animator; // Referencia al Animator del jugador
 
     private Puntaje_Script puntaje;
 
     public event EventHandler MuerteJugador;
+
+
+    public TextMeshProUGUI vidaTexto; // Referencia al TextMeshPro sobre la cabeza
+
 
     void Start()
     {
@@ -28,6 +33,7 @@ public class Vida_Aria : MonoBehaviour
         puntaje = FindObjectOfType<Puntaje_Script>();
 
         BarraVida();
+        ActualizarTextoVida();
     }
 
 
@@ -53,6 +59,7 @@ public class Vida_Aria : MonoBehaviour
 
         // Ejecutar la animación de golpe
         animator.SetTrigger("golpeTrigger");
+        ActualizarTextoVida();
 
         // Actualizar la barra de vida
         if (barraVida != null)
@@ -80,6 +87,7 @@ public class Vida_Aria : MonoBehaviour
         }
 
         animator.SetTrigger("golpeTrigger");
+        ActualizarTextoVida();
         if (aria != null)
         {
             aria.Empujar(puntoDeContacto);
@@ -90,6 +98,22 @@ public class Vida_Aria : MonoBehaviour
         {
             aria.Muerte();
             StartCoroutine(EsperaMuerte());
+        }
+    }
+
+
+    private void ActualizarTextoVida()
+    {
+        if (vidaTexto != null)
+        {
+            if(vida > 0)
+            {
+                vidaTexto.text = "" + vida;
+            }
+            else
+            {
+                vidaTexto.text = "" + 0;
+            }
         }
     }
 
@@ -121,6 +145,7 @@ public class Vida_Aria : MonoBehaviour
         vida = Mathf.Clamp(vida, 0, maximaVida); // Asegúrate de que no supere la vida máxima
 
         barraVida.CambiarVidaActual(vida); // Actualiza la barra de vida con la nueva cantidad de vida
+        ActualizarTextoVida();
     }
 
     // Método para verificar si la vida no está al máximo
